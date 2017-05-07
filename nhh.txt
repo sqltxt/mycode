@@ -1,2 +1,4 @@
 怎么回事啊？
 增加一行
+git add ：暂存
+git commit ：提交
