@@ -10,17 +10,17 @@ import os
 import csv
 
 day = {0:0}
-ctporder=[0,0,0,0]
-sorder=[0,0,0,0]
-AutoTrade=[0,0,0,0]
-userop=[0,0,0,0]
-mylog = [0,0,0,0]
-Account1=[0,0,0,0]
-Account2=[0,0,0,0]
-Account3=[0,0,0,0]
-Account4=[0,0,0,0]
-Account5=[0,0,0,0]
-Account6=[0,0,0,0]
+ctporder=[0,0,0,0,0]
+sorder=[0,0,0,0,0]
+AutoTrade=[0,0,0,0,0]
+userop=[0,0,0,0,0]
+mylog = [0,0,0,0,0]
+Account1=[0,0,0,0,0]
+Account2=[0,0,0,0,0]
+Account3=[0,0,0,0,0]
+Account4=[0,0,0,0,0]
+Account5=[0,0,0,0,0]
+Account6=[0,0,0,0,0]
 def newday():
     week_day = {
         0: '周一',
@@ -56,6 +56,18 @@ def newday():
     Account4[3]     =   'Account4'
     Account5[3]     =   'Account5'
     Account6[3]     =   'Account6'
+
+    ctporder[4]     =   'CTP发单记录'
+    sorder[4]       =   '柜台记录'
+    AutoTrade[4]    =   '图表交易信号'
+    userop[4]       =   '用户操作记录'
+    mylog[4]        =   '开拓者日志'
+    Account1[4]     =   '持仓统计_夜盘'
+    Account2[4]     =   '帐户汇总_夜盘'
+    Account3[4]     =   '当日交易_夜盘'
+    Account4[4]     =   '持仓统计_日盘'
+    Account5[4]     =   '帐户汇总_日盘'
+    Account6[4]     =   '当日交易_日盘'
 
     #print(Account1[0])
 
@@ -133,7 +145,7 @@ def get_txt(l):
             else:
                 y=d
             #print (y)
-            return l[3]+':\n'+y
+            return l[4]+':\n'+y
 def get_csv(l):    
     if os.path.exists(l[0]):
         if os.path.getsize(l[0]) > l[1]:
@@ -156,7 +168,7 @@ def get_csv(l):
                     y=y+row[0]+'\t'+row[2]+'\t'+row[3]+'\t'+row[5]+'\t'+row[6]+'\t'+row[7]+'\n'
                 else:
                      y=r                
-            return  l[3]+':\n'+y
+            return  l[4]+':\n'+y
 
 def get_pic():
     from PIL import ImageGrab
