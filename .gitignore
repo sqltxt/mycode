@@ -1,0 +1,17 @@
+#Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+#Python:
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+*.spec
+dist
+build
+__pycache__
+
+#MY configurations:
+无人值守用户.xlsx
